@@ -1,25 +1,41 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Vue from "vue";
+import Router from "vue-router";
+import BleutestBuy from "./views/BleutestBuy.vue";
+import Compare from "./views/Compare.vue";
+import Remittance from "./views/Remittance.vue";
+import Exchanges from "./views/Exchanges.vue";
+import ExchangesFees from "./views/ExchangesFees.vue";
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: Home
+      path: "/",
+      name: "BleutestBuy",
+      component: BleutestBuy
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      path: "/compare",
+      name: "Compare",
+      component: Compare
+    },
+    {
+      path: "/remittance",
+      name: "Remittance",
+      component: Remittance
+    },
+    {
+      path: "/exchanges",
+      name: "Exchanges",
+      component: Exchanges
+    },
+    {
+      path: "/exchangesfees",
+      name: "ExchangesFees",
+      component: ExchangesFees
     }
   ]
-})
+});
