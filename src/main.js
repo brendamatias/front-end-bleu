@@ -1,9 +1,9 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
-import vSelect from "vue-select";
+import money from 'v-money';
 
-Vue.component("v-select", vSelect);
+Vue.use(money, {precision: 4})
 Vue.config.productionTip = false;
 
 new Vue({

@@ -13,14 +13,15 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: "/",
+      path: "/bleutestbuy",
       name: "BleutestBuy",
       component: BleutestBuy
     },
     {
       path: "/compare",
       name: "Compare",
-      component: Compare
+      component: Compare,
+      props: true,
     },
     {
       path: "/remittance",
